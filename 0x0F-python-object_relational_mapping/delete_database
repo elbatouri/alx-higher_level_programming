@@ -1,0 +1,3 @@
+-- Use a specific database and delete a table
+USE hbtn_0e_6_usa;
+DROP TABLE IF EXISTS states;
