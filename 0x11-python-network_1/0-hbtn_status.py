@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""this script will:
+"""
+this script will:
     - fetches https://alx-intranet.hbtn.io/status
     - use the package urllib
     - use a with statement
-
-    """
+"""
 import urllib.request
 
 if __name__ == '__main__':
