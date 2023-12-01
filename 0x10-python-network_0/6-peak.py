@@ -2,6 +2,7 @@
 # Finds a peak in a list of unsorted integers
 
 def find_peak(list_of_integers):
+    #find a peak in list_of_integers"
     if list_of_integers is None or len(list_of_integers) == 0:
         return None
     the_peak = bSearch(list_of_integers, 0, len(list_of_integers) - 1)
