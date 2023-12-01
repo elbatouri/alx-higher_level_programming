@@ -13,7 +13,7 @@ if __name__ == "__main__":
     payload = {"q": letter}
 
     
-    response = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    response = requests.post('http://0.0.0.0:5000/search_user', data=payload)
     try:
         r = response.json()
         if r == {}:
