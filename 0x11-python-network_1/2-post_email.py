@@ -11,9 +11,11 @@ from urllib import request, parse
 import sys
 
 if __name__ == "__main__":
-    link = sys.argv[1]
-    val = {'email': sys.argv[2]}
-    data = parse.urlencode(val)
-    Req = request.Request(link, data)
-    with request.urlopen(Req) as response:
-        print(response.read().decode('utf-8'))
+    url = sys.argv[1]
+    email = sys.argv[2]
+
+    data = urllib.parse.urlencode({'email': email}).encode('utf-8')
+
+    with urllib.request.urlopen(url, data=data) as response:
+        body = response.read().decode('utf-8')
+        print(body)
