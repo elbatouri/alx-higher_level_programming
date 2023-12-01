@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-""" this script will :
-    - takes in a URL and an email
-    - sends a POST request to the passed URL
-    - displays the body of the response (decoded in utf-8)
-    - use the with statement
-    
-    """
-
+"""
+this script will :
+- takes in a URL and an email
+- sends a POST request to the passed URL
+- displays the body of the response (decoded in utf-8)
+- use the with statement
+ """
 from urllib import request, parse
 import sys
 
