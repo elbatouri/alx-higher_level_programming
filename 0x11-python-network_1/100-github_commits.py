@@ -6,6 +6,7 @@ of a given repository by a specified user using GitHub API.
 import sys
 import requests
 
+
 def get_commits(repo, owner):
     """
     Get the list of commits from the GitHub API
@@ -16,8 +17,9 @@ def get_commits(repo, owner):
     if response.status_code == 200:
         return response.json()
     else:
-        print(f"Error: Unable to fetch commits. Status code: {response.status_code}")
+        print(f"Unable to fetch. Status code: {response.status_code}")
         return None
+
 
 def print_commits(commit_list):
     """
@@ -25,8 +27,9 @@ def print_commits(commit_list):
     """
     for i, commit in enumerate(commit_list[:10]):
         sha = commit.get('sha')
-        author_name = commit.get('commit', {}).get('author', {}).get('name', 'Unknown Author')
-        print(f'{sha}: {author_name}')
+        au_name = commit.get('commit', {}).get('author', {}).get('name', 'UA')
+        print(f'{sha}: {au_name}')
+
 
 def main(argv):
     """
@@ -38,6 +41,7 @@ def main(argv):
     commit_list = get_commits(repo, owner)
     if commit_list is not None:
         print_commits(commit_list)
+
 
 if __name__ == "__main__":
     main(sys.argv)
