@@ -4,11 +4,12 @@
 
 def find_peak(list_of_integers):
     """find a peak in list_of_integers"""
-    
+
     if list_of_integers is None or len(list_of_integers) == 0:
         return None
     the_peak = binary_search(list_of_integers, 0, len(list_of_integers) - 1)
     return list_of_integers[the_peak]
+
 
 def binary_search(a, lo, hi):
     if lo > hi:
