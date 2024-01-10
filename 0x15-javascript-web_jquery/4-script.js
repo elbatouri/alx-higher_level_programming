@@ -1,4 +1,4 @@
-// add item to list onclick
+// toggles the class onclick
 
 $('DIV#toggle_header').click(()=>{
     $('HEADER').toggleClass('green red');
